@@ -1,9 +1,10 @@
+import java.nio.file.Paths;
 import java.util.InputMismatchException;
 
 public class ReadFile {
 
 
-    public void Parse(String command){
+    public static void Parse(String command){
 
         String [] arr= command.split(" ");
 
@@ -56,12 +57,32 @@ public class ReadFile {
             if (KeyPath.equals("") || InputPath.equals("") || OutputPath.equals("")){
                 throw new InputMismatchException("could not find path");
             }
+
+            if (IsEncrypt){
+                Encrypt_AES En_AES = new Encrypt_AES(KeyPath,InputPath,OutputPath);
+                En_AES.Encrypt();
+            }
+            else {
+                //todo
+            }
         }
 
 
 
     }
 
+    public static void main(String[] args) {
+        Parse("-e -k key_short -i message_short -o try.txt");
+
+//        byte[] keys=new byte[16];
+//        byte[][] m=new byte[1][];
+//        m[0]=new byte[16];
+//        m[0][7]=1;
+//        String output="try.txt";
+//        Encrypt_AES En_AES = new Encrypt_AES(keys,keys,keys,m,output);
+//        En_AES.Encrypt();
+
+    }
 
 
 
