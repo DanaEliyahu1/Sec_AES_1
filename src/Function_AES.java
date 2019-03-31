@@ -68,10 +68,10 @@ public class Function_AES {
         ShiftRow[2] = message[10];
         ShiftRow[6] = message[14];
         ShiftRow[10] = message[2];
-        ShiftRow[14] = message[11];
-        ShiftRow[3] = message[12];
+        ShiftRow[14] = message[6];
+        ShiftRow[3] = message[15];
         ShiftRow[7] = message[3];
-        ShiftRow[11] = message[14];
+        ShiftRow[11] = message[7];
         ShiftRow[15] = message[11];
 
         return ShiftRow;
@@ -91,10 +91,10 @@ public class Function_AES {
         UnShiftRow[10] = message[2];
         UnShiftRow[14] = message[6];
         UnShiftRow[2] = message[10];
-        UnShiftRow[11] = message[14];
-        UnShiftRow[12] = message[3];
+        UnShiftRow[6] = message[14];
+        UnShiftRow[15] = message[3];
         UnShiftRow[3] = message[7];
-        UnShiftRow[14] = message[11];
+        UnShiftRow[7] = message[11];
         UnShiftRow[11] = message[15];
 
         return UnShiftRow;
