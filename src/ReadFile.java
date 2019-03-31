@@ -63,7 +63,8 @@ public class ReadFile {
                 En_AES.Encrypt();
             }
             else {
-                //todo
+                Decrypt_AES En_AES = new Decrypt_AES(KeyPath,InputPath,OutputPath);
+                En_AES.Decrypt();
             }
         }
 
@@ -81,7 +82,6 @@ public class ReadFile {
 //        String output="try.txt";
 //        Encrypt_AES En_AES = new Encrypt_AES(keys,keys,keys,m,output);
 //        En_AES.Encrypt();
-
     }
 
 
