@@ -44,7 +44,7 @@ public class Encrypt_AES extends Function_AES {
     }
 
 
-    public void Encrypt() {
+    public byte [] Encrypt() {
         byte[] AfterShiftRow = null;
         byte[] Afterxor = null;
         byte[] result = new byte[MainMessage.length];
@@ -61,8 +61,11 @@ public class Encrypt_AES extends Function_AES {
                 result[16 * i + j] = Afterxor[j];
             }
         }
-        WriteResToFile(OutputPath, result);
+        if(OutputPath!= null){
+            WriteResToFile(OutputPath, result);
+        }
 
+        return result;
 
     }
 

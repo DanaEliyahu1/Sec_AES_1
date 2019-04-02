@@ -28,6 +28,9 @@ public class ReadFile {
             if (MessPath.equals("") || CipherPath.equals("") || OutputPath.equals("")){
                 throw new InputMismatchException("could not find path");
             }
+            Break_AES break_aes=new Break_AES(MessPath,CipherPath,OutputPath);
+
+            break_aes.BreakKey();
         }
         else{
             boolean IsEncrypt= false;
@@ -73,7 +76,7 @@ public class ReadFile {
     }
 
     public static void main(String[] args) {
-        Parse("-d -k key_short -i cipher_short -o try.txt");
+        Parse("-e -k tryK.txt -i message_short -o ciphertry");
 
 //        byte[] keys=new byte[16];
 //        byte[][] m=new byte[1][];
