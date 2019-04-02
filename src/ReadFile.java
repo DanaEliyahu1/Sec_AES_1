@@ -76,7 +76,10 @@ public class ReadFile {
     }
 
     public static void main(String[] args) {
-        Parse("-e -k tryK.txt -i message_short -o ciphertry");
+      //  Parse("-e -k tryK.txt -i message_long -o test.txt ");
+         // Parse("-b -m message_long -c cipher_long -o tryK.txt ");
+          Parse("-d -k tryK.txt -i cipher_long -o test.txt ");
+
 
 //        byte[] keys=new byte[16];
 //        byte[][] m=new byte[1][];
