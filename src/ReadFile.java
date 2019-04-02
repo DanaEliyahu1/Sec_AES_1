@@ -4,9 +4,9 @@ import java.util.InputMismatchException;
 public class ReadFile {
 
 
-    public static void Parse(String command){
+    public static void Parse(String[] command){
 
-        String [] arr= command.split(" ");
+        String [] arr= command;//.split(" ");
 
         if(arr[0].equals("-b")){
             String MessPath="";
@@ -78,8 +78,8 @@ public class ReadFile {
     public static void main(String[] args) {
       //  Parse("-e -k tryK.txt -i message_long -o test.txt ");
          // Parse("-b -m message_long -c cipher_long -o tryK.txt ");
-          Parse("-d -k tryK.txt -i cipher_long -o test.txt ");
-
+        //  Parse("-d -k tryK.txt -i cipher_long -o test.txt ");
+            Parse(args);
 
 //        byte[] keys=new byte[16];
 //        byte[][] m=new byte[1][];
